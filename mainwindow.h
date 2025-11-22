@@ -19,8 +19,9 @@
 #include <QDir>
 #include <QFile>
 #include <QColor>
+#include <QShowEvent>
 
-// api de wallhaven
+// Incluimos la API de wallhaven
 #include "wallhaven_api.h"
 
 QT_BEGIN_NAMESPACE
@@ -37,6 +38,8 @@ public:
 
 protected:
     bool nativeEvent(const QByteArray &eventType, void *message, qintptr *result) override;
+
+    void showEvent(QShowEvent *event) override;
 
 private slots:
     // Slots conectados a WallhavenApi
@@ -58,7 +61,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    WallhavenApi *api; // Reemplaza a QNetworkAccessManager
+    WallhavenApi *api;
 
     int currentPage;
     bool isLoading;

@@ -5,8 +5,9 @@
 #include <QDebug>
 #include <QDesktopServices>
 #include <QStyleFactory>
-#include <QFile> // Necesario para leer el QSS
+#include <QFile>
 #include <utility>
+#include <QStyle>
 
 // --- WINDOWS SPECIFIC ---
 #ifdef Q_OS_WIN
@@ -60,13 +61,19 @@ MainWindow::MainWindow(QWidget *parent)
 
     loadSettings();
     setupUI();
-    updateWindowStyle();
+
     fetchWallpapers();
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::showEvent(QShowEvent *event)
+{
+    QMainWindow::showEvent(event);
+    updateWindowStyle();
 }
 
 bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, qintptr *result)
@@ -86,8 +93,8 @@ bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, qintptr
 
 void MainWindow::loadSettings()
 {
-    QSettings settings("wallpaper_downloader_app", "WallhavenDownloader");
-    QString defaultPath = QStandardPaths::writableLocation(QStandardPaths::PicturesLocation) + "/Wallhaven Backgrounds";
+    QSettings settings("MySoft", "WallhavenDownloader");
+    QString defaultPath = QStandardPaths::writableLocation(QStandardPaths::PicturesLocation) + "/backgrounds";
 
     downloadPath = settings.value("downloadPath", defaultPath).toString();
     themeMode = settings.value("themeMode", 0).toInt();
@@ -96,7 +103,7 @@ void MainWindow::loadSettings()
 
 void MainWindow::saveSettings()
 {
-    QSettings settings("wallpaper_downloader_app", "WallhavenDownloader");
+    QSettings settings("MySoft", "WallhavenDownloader");
     settings.setValue("downloadPath", downloadPath);
     settings.setValue("themeMode", themeMode);
     settings.setValue("backdropMode", backdropMode);
@@ -173,8 +180,6 @@ void MainWindow::updateWindowStyle()
             DwmSetWindowAttribute(hwnd, DWMWA_MICA_EFFECT, &micaValue, sizeof(micaValue));
         }
     }
-
-// Aplicamos desenfoque en KDE :3!
 #elif defined(Q_OS_LINUX) && !defined(Q_OS_ANDROID)
     if (backdropMode == 3) {
         KWindowEffects::enableBlurBehind(this->winId(), true);
@@ -184,12 +189,15 @@ void MainWindow::updateWindowStyle()
 #endif
 
     applyStyles(useDark);
-    this->repaint();
+
+    // CORRECCIÓN: Forzar repintado profundo de widgets
+    this->style()->unpolish(this);
+    this->style()->polish(this);
+    this->update();
 }
 
 void MainWindow::applyStyles(bool isDark)
 {
-    // colores dinámicos
     QColor accent = getSystemAccentColor();
     QColor accentLight = accent.lighter(130);
     QColor accentDark = accent.darker(110);
@@ -202,7 +210,6 @@ void MainWindow::applyStyles(bool isDark)
                                       QString::number(accent.green()),
                                       QString::number(accent.blue()));
 
-    // paleta de colores Qt (para diálogos estándar)
     QPalette palette;
     if (isDark) {
         palette.setColor(QPalette::Window, QColor(30, 30, 30));
@@ -233,7 +240,6 @@ void MainWindow::applyStyles(bool isDark)
     }
     qApp->setPalette(palette);
 
-    // procesar el archivo QSS
     QFile file(":/style.qss");
     if (!file.open(QFile::ReadOnly)) {
         qWarning() << "No se pudo abrir style.qss";
@@ -242,7 +248,6 @@ void MainWindow::applyStyles(bool isDark)
     QString styleSheet = QLatin1String(file.readAll());
     file.close();
 
-    // reemplazar estilo según el tema (Dark/Light)
     if (isDark) {
         styleSheet.replace("%TEXT_COLOR%", "#eeeeee");
         styleSheet.replace("%TEXT_COLOR_ALT%", "white");
@@ -256,7 +261,6 @@ void MainWindow::applyStyles(bool isDark)
         styleSheet.replace("%ACCENT_DARK%", colAccentDark);
         styleSheet.replace("%ACCENT_ALPHA%", colAccentAlpha);
 
-        // Sidebar
         styleSheet.replace("%SIDEBAR_BG%", "rgba(43, 43, 43, 75)");
         styleSheet.replace("%SIDEBAR_BORDER%", "rgba(62, 62, 62, 100)");
         styleSheet.replace("%BTN_TEXT%", "#cccccc");
@@ -264,7 +268,6 @@ void MainWindow::applyStyles(bool isDark)
         styleSheet.replace("%INPUT_BG%", "rgba(0, 0, 0, 50)");
         styleSheet.replace("%INPUT_BORDER%", "rgba(80, 80, 80, 100)");
 
-        // List Widget
         styleSheet.replace("%ITEM_BG%", "rgba(45, 45, 45, 75)");
         styleSheet.replace("%ITEM_BORDER%", "rgba(255, 255, 255, 15)");
         styleSheet.replace("%ITEM_HOVER_BG%", "rgba(60, 60, 60, 120)");
@@ -281,7 +284,6 @@ void MainWindow::applyStyles(bool isDark)
         styleSheet.replace("%ACCENT_DARK%", colAccentDark);
         styleSheet.replace("%ACCENT_ALPHA%", colAccentAlpha);
 
-        // Sidebar
         styleSheet.replace("%SIDEBAR_BG%", "rgba(255, 255, 255, 80)");
         styleSheet.replace("%SIDEBAR_BORDER%", "rgba(0, 0, 0, 20)");
         styleSheet.replace("%BTN_TEXT%", "#222");
@@ -289,13 +291,11 @@ void MainWindow::applyStyles(bool isDark)
         styleSheet.replace("%INPUT_BG%", "rgba(255, 255, 255, 120)");
         styleSheet.replace("%INPUT_BORDER%", "rgba(0, 0, 0, 30)");
 
-        // List Widget
         styleSheet.replace("%ITEM_BG%", "rgba(255, 255, 255, 80)");
         styleSheet.replace("%ITEM_BORDER%", "rgba(0, 0, 0, 10)");
         styleSheet.replace("%ITEM_HOVER_BG%", "rgba(255, 255, 255, 150)");
     }
 
-    // aplicar estilo globalmente
     qApp->setStyleSheet(styleSheet);
 }
 
@@ -331,7 +331,7 @@ void MainWindow::setupUI()
 void MainWindow::onActionSettingsTriggered()
 {
     QDialog dialog(this);
-    dialog.setWindowTitle(tr("Application Settings"));
+    dialog.setWindowTitle(tr("Download Settings"));
     dialog.setMinimumWidth(500);
 
     QVBoxLayout *layout = new QVBoxLayout(&dialog);
@@ -379,6 +379,8 @@ void MainWindow::onActionSettingsTriggered()
         backdropMode = comboEffect->currentData().toInt();
 
         saveSettings();
+
+        // Actualizar estilo inmediatamente
         updateWindowStyle();
 
         ui->statusbar->showMessage(tr("Settings updated"), 3000);
@@ -398,7 +400,7 @@ void MainWindow::onActionAboutQtTriggered()
 void MainWindow::onActionAboutAppTriggered()
 {
     QMessageBox::about(this, tr("About Wallpaper downloader"),
-                       tr("<h3>Wallpaper downloader v0.9-dev-preview</h3>"
+                       tr("<h3>Wallpaper downloader v1.0-dev-preview</h3>"
                           "<p>Created by: Jesus Chapman<br>"
                           "A simple app for download wallpapers using wallhaven api and Qt Tecnologies</p>"));
 }

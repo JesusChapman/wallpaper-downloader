@@ -119,7 +119,7 @@
         <location filename="mainwindow.ui" line="258"/>
         <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="216"/>
         <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="212"/>
-        <location filename="mainwindow.cpp" line="395"/>
+        <location filename="mainwindow.cpp" line="397"/>
         <source>About Qt</source>
         <translation>Acerca de Qt</translation>
     </message>
@@ -127,14 +127,13 @@
         <location filename="mainwindow.ui" line="263"/>
         <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="217"/>
         <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="213"/>
-        <location filename="mainwindow.cpp" line="400"/>
+        <location filename="mainwindow.cpp" line="402"/>
         <source>About Wallpaper downloader</source>
         <translation>Acerca de Descargador de fondos de pantalla</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="334"/>
         <source>Application Settings</source>
-        <translation>Ajustes de aplicación</translation>
+        <translation type="vanished">Ajustes de aplicación</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="339"/>
@@ -182,59 +181,64 @@
         <translation>Seleccionar Carpeta</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="384"/>
+        <location filename="mainwindow.cpp" line="386"/>
         <source>Settings updated</source>
         <translation>Ajustes actualizados</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="401"/>
-        <source>&lt;h3&gt;Wallpaper downloader v0.9-dev-preview&lt;/h3&gt;&lt;p&gt;Created by: Jesus Chapman&lt;br&gt;A simple app for download wallpapers using wallhaven api and Qt Tecnologies&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Descargador de fondos de pantalla v0.9-dev-preview&lt;/h3&gt;&lt;p&gt;Creado por: Jesus Chapman&lt;br&gt;Una simple app para descargar fondos de pantalla usando la api de Wallhaven y tecnologías Qt&lt;/p&gt;</translation>
+        <location filename="mainwindow.cpp" line="403"/>
+        <source>&lt;h3&gt;Wallpaper downloader v1.0-dev-preview&lt;/h3&gt;&lt;p&gt;Created by: Jesus Chapman&lt;br&gt;A simple app for download wallpapers using wallhaven api and Qt Tecnologies&lt;/p&gt;</source>
+        <translation>&lt;h3&gt;Descargador de fondos de pantalla v1.0-dev-preview&lt;/h3&gt;&lt;p&gt;Creado por: Jesus Chapman&lt;br&gt;Una simple app para descargar fondos de pantalla usando la api de Wallhaven y tecnologías Qt&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="448"/>
+        <location filename="mainwindow.cpp" line="450"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="448"/>
+        <location filename="mainwindow.cpp" line="450"/>
         <source>No results found.</source>
         <translation>No se encontraron resultados.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="492"/>
+        <location filename="mainwindow.cpp" line="494"/>
         <source>Starting download: </source>
         <translation>Iniciando descarga: </translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="525"/>
+        <location filename="mainwindow.cpp" line="527"/>
         <source>Saved: </source>
         <translation>Guardado: </translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="513"/>
-        <location filename="mainwindow.cpp" line="528"/>
+        <location filename="mainwindow.cpp" line="515"/>
+        <location filename="mainwindow.cpp" line="530"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="513"/>
-        <location filename="mainwindow.cpp" line="528"/>
+        <location filename="mainwindow.cpp" line="334"/>
+        <source>Download Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="515"/>
+        <location filename="mainwindow.cpp" line="530"/>
         <source>Download failed.</source>
         <translation>Falló la descarga.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="535"/>
+        <location filename="mainwindow.cpp" line="537"/>
         <source>Preview</source>
         <translation>Vista Previa</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="547"/>
+        <location filename="mainwindow.cpp" line="549"/>
         <source>Open Folder</source>
         <translation>Abrir Carpeta</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="548"/>
+        <location filename="mainwindow.cpp" line="550"/>
         <source>Close</source>
         <translation>Cerrar</translation>
     </message>
