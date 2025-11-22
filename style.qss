@@ -1,0 +1,123 @@
+/* --- ESTILOS GLOBALES --- */
+QMainWindow {
+    background: transparent;
+}
+
+/* Barra de Menú */
+QMenuBar {
+    background-color: transparent;
+    color: %TEXT_COLOR%;
+}
+QMenuBar::item {
+    background: transparent;
+    padding: 4px 10px;
+}
+QMenuBar::item:selected {
+    background: %HOVER_BG%;
+    border-radius: 4px;
+}
+
+/* Menús Contextuales y Desplegables */
+QMenu {
+    background-color: %MENU_BG%;
+    color: %TEXT_COLOR_ALT%;
+    border: 1px solid %BORDER_COLOR%;
+    border-radius: 8px;
+    padding: 5px;
+}
+QMenu::item {
+    padding: 5px 20px;
+    border-radius: 4px;
+}
+QMenu::item:selected {
+    background-color: %HOVER_BG%;
+}
+
+/* Diálogos (QMessageBox, etc) */
+QMessageBox {
+    background-color: %DIALOG_BG%;
+}
+QLabel {
+    color: %TEXT_COLOR%;
+}
+
+/* Barra de Progreso */
+QProgressBar {
+    border: none;
+    background-color: %PROGRESS_BG%;
+    height: 6px;
+    text-align: center;
+}
+QProgressBar::chunk {
+    background-color: %ACCENT_COLOR%;
+    border-radius: 3px;
+}
+
+/* --- BARRA LATERAL (Sidebar) --- */
+QFrame#sidebarFrame {
+    background-color: %SIDEBAR_BG%;
+    border-right: 1px solid %SIDEBAR_BORDER%;
+}
+
+/* Botones de la Barra Lateral */
+QPushButton {
+    text-align: left;
+    padding: 8px 15px;
+    border: none;
+    background-color: transparent;
+    color: %BTN_TEXT%;
+    font-size: 14px;
+}
+QPushButton:hover {
+    background-color: %HOVER_BG%;
+    color: %TEXT_COLOR_ALT%;
+    border-radius: 4px;
+}
+QPushButton:checked {
+    background-color: %ACCENT_COLOR%;
+    color: white;
+    border-radius: 4px;
+}
+
+/* Etiquetas y Entradas en Sidebar */
+QLabel#label_search, QLabel#label_cats {
+    color: %LABEL_COLOR%;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+QLineEdit {
+    padding: 6px;
+    background-color: %INPUT_BG%;
+    border: 1px solid %INPUT_BORDER%;
+    color: %TEXT_COLOR_ALT%;
+    border-radius: 4px;
+    margin: 5px 10px;
+}
+QLineEdit:focus {
+    border: 1px solid %ACCENT_LIGHT%;
+}
+
+/* --- LISTA DE IMÁGENES --- */
+QListWidget {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+QListWidget::item {
+    background-color: %ITEM_BG%;
+    margin: 5px;
+    border-radius: 8px;
+    border: 1px solid %ITEM_BORDER%;
+    color: %TEXT_COLOR_ALT%;
+}
+QListWidget::item:hover {
+    border: 2px solid %ACCENT_LIGHT%;
+    background-color: %ITEM_HOVER_BG%;
+}
+QListWidget::item:selected {
+    background-color: %ACCENT_ALPHA%;
+    border: 2px solid %ACCENT_DARK%;
+    color: white;
+}
