@@ -93,7 +93,7 @@ bool MainWindow::nativeEvent(const QByteArray &eventType, void *message, qintptr
 
 void MainWindow::loadSettings()
 {
-    QSettings settings("MySoft", "WallhavenDownloader");
+    QSettings settings("wallpaper_downloader_app", "Qt Application");
     QString defaultPath = QStandardPaths::writableLocation(QStandardPaths::PicturesLocation) + "/backgrounds";
 
     downloadPath = settings.value("downloadPath", defaultPath).toString();
@@ -103,7 +103,7 @@ void MainWindow::loadSettings()
 
 void MainWindow::saveSettings()
 {
-    QSettings settings("MySoft", "WallhavenDownloader");
+    QSettings settings("wallpaper_downloader_app", "Qt Application");
     settings.setValue("downloadPath", downloadPath);
     settings.setValue("themeMode", themeMode);
     settings.setValue("backdropMode", backdropMode);
