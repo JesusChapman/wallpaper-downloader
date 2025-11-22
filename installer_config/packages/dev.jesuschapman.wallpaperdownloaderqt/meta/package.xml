@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package>
+    <DisplayName>Wallpaper Downloader App</DisplayName>
+    <Description>Wallhaven client using Qt for download best wallpapers</Description>
+    <Version>1.0-dev-preview</Version>
+    <ReleaseDate>2025-11-22</ReleaseDate>
+    
+    <Licenses>
+        <License name="License" file="license.txt" />
+    </Licenses>
+    
+    <Default>true</Default>
+    <Script>installscript.qs</Script>
+</Package>

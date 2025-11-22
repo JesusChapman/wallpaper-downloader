@@ -62,3 +62,29 @@ endif()
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(wallpaper_downloader)
 endif()
+
+if(WIN32)
+    # --- GENERACIÓN DE INSTALADOR CON QT INSTALLER FRAMEWORK ---
+    set(IFW_CONFIG_DIR "${CMAKE_SOURCE_DIR}/installer_config")
+    set(IFW_PACKAGE_DIR "${IFW_CONFIG_DIR}/packages/dev.jesuschapman.wallpaperdownloaderqt")
+    set(IFW_DATA_DIR "${IFW_PACKAGE_DIR}/data")
+
+    add_custom_command(TARGET wallpaper_downloader POST_BUILD
+
+        COMMAND "${CMAKE_COMMAND}" -E make_directory "${IFW_DATA_DIR}"
+
+        COMMAND "${CMAKE_COMMAND}" -E copy "$<TARGET_FILE:wallpaper_downloader>" "${IFW_DATA_DIR}/"
+
+        COMMAND "${WINDEPLOYQT_EXECUTABLE}"
+                --verbose 0
+                --no-compiler-runtime
+                --no-opengl-sw
+                --dir "${IFW_DATA_DIR}"
+                "${IFW_DATA_DIR}/wallpaper_downloader.exe"
+
+        COMMAND "${CMAKE_COMMAND}" -E make_directory "${IFW_DATA_DIR}/translations"
+
+        COMMENT "Preparando archivos para el Instalador IFW..."
+    )
+
+endif()

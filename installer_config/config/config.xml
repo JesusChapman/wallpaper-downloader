@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Installer>
+    <Name>Wallpaper Downloader</Name>
+    <Version>1.0-dev-preview</Version>
+    <Title>Wallpaper Downloader Installer</Title>
+    <Publisher>Jesus Chapman</Publisher>
+    <!-- El directorio por defecto donde se instalará -->
+    <TargetDir>@ApplicationsDir@/WallpaperDownloaderQt</TargetDir>
+    <StartMenuDir>Wallpaper Downloader</StartMenuDir>
+
+    <WizardStyle>Modern</WizardStyle>
+
+    <InstallerWindowIcon>appicon.png</InstallerWindowIcon> 
+    
+    <!-- Icono de la aplicación en el panel de control "Agregar o quitar programas" -->
+    <InstallerApplicationIcon>appicon</InstallerApplicationIcon>
+</Installer>
+

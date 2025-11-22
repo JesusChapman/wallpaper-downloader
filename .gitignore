@@ -81,3 +81,4 @@ CMakeLists.txt.user*
 .uic/
 /build*/
 /deploy*/
+/installer_config/packages/dev.jesuschapman.wallpaperdownloaderqt/data*/
