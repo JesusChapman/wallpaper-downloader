@@ -310,6 +310,8 @@ void MainWindow::setupUI()
     ui->progressBar->setVisible(false);
     ui->progressBar->setValue(0);
 
+    ui->btnSearchAction->setCheckable(true);
+
     connect(ui->listWidget->verticalScrollBar(), &QScrollBar::valueChanged, this, &MainWindow::onScrollValueChanged);
     connect(ui->listWidget, &QListWidget::itemClicked, this, &MainWindow::onListItemClicked);
     connect(ui->inputSearch, &QLineEdit::returnPressed, this, &MainWindow::onSearchClicked);
@@ -420,14 +422,37 @@ void MainWindow::onSearchClicked()
 {
     QString text = ui->inputSearch->text().trimmed();
     if (text.isEmpty()) return;
-    resetAndSearch(text, "relevance", "111");
+
+    ui->btnToplist->setAutoExclusive(false);
+    ui->btnAnime->setAutoExclusive(false);
+    ui->btnNature->setAutoExclusive(false);
+    ui->btnPeople->setAutoExclusive(false);
+    ui->btnArt->setAutoExclusive(false);
+    ui->btnSciFi->setAutoExclusive(false);
+
     ui->btnToplist->setChecked(false);
+    ui->btnAnime->setChecked(false);
+    ui->btnNature->setChecked(false);
+    ui->btnPeople->setChecked(false);
+    ui->btnArt->setChecked(false);
+    ui->btnSciFi->setChecked(false);
+
+    ui->btnToplist->setAutoExclusive(true);
+    ui->btnAnime->setAutoExclusive(true);
+    ui->btnNature->setAutoExclusive(true);
+    ui->btnPeople->setAutoExclusive(true);
+    ui->btnArt->setAutoExclusive(true);
+    ui->btnSciFi->setAutoExclusive(true);
+
+    ui->btnSearchAction->setChecked(true);
+    resetAndSearch(text, "relevance", "111");
 }
 
 void MainWindow::onCategoryButtonClicked()
 {
     QPushButton *btn = qobject_cast<QPushButton*>(sender());
     if (!btn) return;
+    ui->btnSearchAction->setChecked(false);
     QString name = btn->objectName();
     if (name == "btnToplist") resetAndSearch("", "toplist", "111");
     else if (name == "btnAnime") resetAndSearch("", "relevance", "010");
