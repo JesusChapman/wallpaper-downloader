@@ -133,7 +133,7 @@
     </message>
     <message>
         <source>Application Settings</source>
-        <translation type="vanished">Ajustes de aplicación</translation>
+        <translation type="unfinished">Tema de la aplicación:</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="339"/>

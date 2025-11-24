@@ -331,7 +331,7 @@ void MainWindow::setupUI()
 void MainWindow::onActionSettingsTriggered()
 {
     QDialog dialog(this);
-    dialog.setWindowTitle(tr("Download Settings"));
+    dialog.setWindowTitle(tr("Application Settings"));
     dialog.setMinimumWidth(500);
 
     QVBoxLayout *layout = new QVBoxLayout(&dialog);
