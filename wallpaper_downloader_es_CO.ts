@@ -5,128 +5,110 @@
     <name>MainWindow</name>
     <message>
         <location filename="mainwindow.ui" line="14"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="214"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="210"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="214"/>
         <source>Wallpaper downloader</source>
         <translation>Descargador de fondos de pantalla</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="58"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="219"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="215"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="219"/>
         <source>SEARCH</source>
         <translation>BUSCAR</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="65"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="220"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="216"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="220"/>
         <source>Type something...</source>
         <translation>Escribe algo...</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="75"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="221"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="217"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="221"/>
         <source>🔍 Search</source>
         <translation>🔍 Buscar</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="82"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="222"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="218"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="222"/>
         <source>CATEGORIES</source>
         <translation>CATEGORÍAS</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="92"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="223"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="219"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="223"/>
         <source>⭐ Toplist</source>
         <translation>⭐ Destacados</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="111"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="224"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="220"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="224"/>
         <source>🗾 Anime</source>
         <translation>🗾 Anime</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="127"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="225"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="221"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="225"/>
         <source>🍃 Nature</source>
         <translation>🍃 Naturaleza</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="143"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="226"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="222"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="226"/>
         <source>👥 People</source>
         <translation>👥 Personas</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="159"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="227"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="223"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="227"/>
         <source>🎨 Art</source>
         <translation>🎨 Arte</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="175"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="228"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="224"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="228"/>
         <source>🚀 Sci-Fi</source>
         <translation>🚀 Ciencia Ficción</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="215"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="229"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="225"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="229"/>
         <source>%p% - Downloading...</source>
         <translation>%p% - Descargando...</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="234"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="230"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="226"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="230"/>
         <source>Options</source>
         <translation>Opciones</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="268"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="218"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="214"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="218"/>
         <source>Open Downloads Folder</source>
         <translation>Abrir carpeta de descargas</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="253"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="215"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="211"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="215"/>
         <source>Settings</source>
         <translation>Ajustes</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="242"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="231"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="227"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="231"/>
         <source>Help</source>
         <translation>Ayuda</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="258"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="216"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="212"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="216"/>
         <location filename="mainwindow.cpp" line="399"/>
         <source>About Qt</source>
         <translation>Acerca de Qt</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="263"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="217"/>
-        <location filename="build/Desktop_Qt_6_10_0_MSVC2022_64bit-MinSizeRel/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="213"/>
+        <location filename="build/Desktop-Debug/wallpaper_downloader_autogen/include/ui_mainwindow.h" line="217"/>
         <location filename="mainwindow.cpp" line="404"/>
         <source>About Wallpaper downloader</source>
         <translation>Acerca de Descargador de fondos de pantalla</translation>

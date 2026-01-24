@@ -182,9 +182,9 @@ void MainWindow::updateWindowStyle()
     }
 #elif defined(Q_OS_LINUX) && !defined(Q_OS_ANDROID)
     if (backdropMode == 3) {
-        KWindowEffects::enableBlurBehind(this->winId(), true);
+        KWindowEffects::enableBlurBehind(this->windowHandle(), true);
     } else {
-        KWindowEffects::enableBlurBehind(this->winId(), false);
+        KWindowEffects::enableBlurBehind(this->windowHandle(), false);
     }
 #endif
 

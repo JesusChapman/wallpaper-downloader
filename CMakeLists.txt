@@ -14,7 +14,8 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets Network LinguistTools)
 
 # --- CONFIGURACIÓN LINUX (KDE KF6) ---
 if(UNIX AND NOT APPLE AND NOT ANDROID)
-    find_package(KF6 REQUIRED COMPONENTS WindowSystem Config)
+    find_package(KF6Config REQUIRED)
+    find_package(KF6WindowSystem REQUIRED)
 endif()
 
 # Archivos fuente
