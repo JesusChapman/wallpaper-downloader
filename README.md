@@ -88,7 +88,7 @@ Ensure you have the following installed:
 
 ```bash
 # Clone te repository 
-git clone https://github.com/tu-usuario/wallpaper-downloader.git 
+git clone https://github.com/JesusChapman/wallpaper-downloader.git 
 cd wallpaper-downloader 
 # Setup build dir 
 mkdir build && cd build 
